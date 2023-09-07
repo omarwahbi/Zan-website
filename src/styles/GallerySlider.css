@@ -1,0 +1,15 @@
+.images-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+.gallery-slidshow {
+  width: 80%;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .gallery-slidshow {
+    width: 100%;
+  }
+}

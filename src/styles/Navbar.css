@@ -1,0 +1,21 @@
+.navbar-theme {
+  background-color: #f9f9f9;
+  box-shadow: none;
+  margin-bottom: 0 !important;
+  padding-bottom: 0;
+  margin-left: 0;
+  padding-left: 15px;
+}
+.active {
+  color: #b78364 !important;
+}
+
+.navbar-link-color {
+  color: #1e1e1e;
+}
+.navbar-link-color:hover {
+  color: #b78364 !important;
+}
+.nav-item-color {
+  box-shadow: none;
+}

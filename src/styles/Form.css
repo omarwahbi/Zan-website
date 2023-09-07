@@ -1,0 +1,15 @@
+.form-sizing {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.form-text-area-color {
+  background-color: #f9f9f9;
+}
+.form-theme {
+  width: 90%;
+  margin: auto;
+  background-color: #e8e7e6;
+  padding: 10px;
+  margin-bottom: 30px;
+}

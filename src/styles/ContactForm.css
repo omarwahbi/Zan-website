@@ -1,0 +1,19 @@
+.dark-theme {
+  background-color: #e8e7e6;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+.get-estimate {
+  font-size: 48px;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 600;
+  color: #b78364;
+}
+.icon-color {
+  color: #b78364 !important;
+}
+.font-color {
+  color: "#1e1e1e";
+  font-family: "Roboto", sans-serif;
+}

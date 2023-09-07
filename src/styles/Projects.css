@@ -1,0 +1,10 @@
+.assistance-img {
+  width: 600px;
+  height: 400px;
+}
+@media (max-width: 767px) {
+  .assistance-img {
+    display: none;
+    margin: 0;
+  }
+}
