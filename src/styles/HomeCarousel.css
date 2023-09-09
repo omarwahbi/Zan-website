@@ -1,6 +1,12 @@
 .header-div {
   margin-top: 100px;
 }
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
 .header-title {
   font-size: 85px;
   color: #b78364;
@@ -15,14 +21,13 @@
   margin-bottom: 0;
   padding-top: 0;
   color: #1e1e1e;
-  /* text-align: justify; */
   max-width: 550px;
-  /* text-justify: inter-word; */
 }
 .learn-more-img {
   max-width: 500px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+  margin-right: 22px;
 }
 .mobile-learn-more-div {
   display: none;
@@ -33,7 +38,6 @@
   border-top: 0;
   margin-top: 2px;
   padding-top: 0;
-
   margin: auto;
 }
 .font {

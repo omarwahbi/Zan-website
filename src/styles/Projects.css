@@ -1,3 +1,25 @@
+.menu-container {
+  max-width: 80%;
+  margin: 20px auto;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.project-categories {
+  max-width: 70%;
+  margin: auto;
+}
+.menu-item-img {
+  max-width: 95%;
+}
+.category-scale {
+  transition: transform 0.3s;
+}
+.category-scale:hover {
+  transform: scale(1.05);
+}
+
 .assistance-img {
   width: 600px;
   height: 400px;

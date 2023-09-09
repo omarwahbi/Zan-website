@@ -10,6 +10,18 @@
   font-weight: 600;
   color: #b78364;
 }
+.scale {
+  transition: transform 0.3s;
+}
+.scale:hover {
+  transform: scale(1.2);
+}
+.details-icons {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .icon-color {
   color: #b78364 !important;
 }

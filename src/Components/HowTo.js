@@ -9,11 +9,9 @@ import React from "react";
 
 export default function HowTo() {
   return (
-    <div>
-      <div className="how-to-container">
-        <hr className="dash" />
-        <h2 className="d-inline-block how-text-color">How it works</h2>
-        <hr className="dash" />
+    <div className="container">
+      <div className="how-to-container text-center">
+        <h2 className="d-inline-block how-text-color ">How it works</h2>
       </div>
       <div className="how-to-head-text mb-5">
         <h3 style={{ fontWeight: "400", color: "#1e1e1e" }}>

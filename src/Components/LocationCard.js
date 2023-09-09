@@ -9,11 +9,8 @@ import {
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 export default function LocationCard(props) {
   return (
-    <div className="mt-2">
-      <MDBCard
-        background={props.background}
-        className="text-white text-end h-100"
-      >
+    <div className="mt-2 arabic-font">
+      <MDBCard className="text-white text-end h-100 card-color">
         <MDBCardHeader className="fw-bold p-2">
           {props.province}
           <LocationOnOutlinedIcon />

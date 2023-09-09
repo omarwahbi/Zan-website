@@ -35,7 +35,7 @@ export default function ContactForm() {
                   >
                     <MDBIcon
                       className={`icon-color fas fa-3x mb-2  ${
-                        hovering.tools ? "fa-bounce" : ""
+                        hovering.tools ? "scale" : ""
                       }`}
                       fas
                       icon="tools"
@@ -64,7 +64,7 @@ export default function ContactForm() {
                       icon="cogs"
                       size="4x"
                       className={`fas fa-3x mb-2 icon-color ${
-                        hovering.cogs ? "fa-beat" : ""
+                        hovering.cogs ? "scale" : ""
                       }`}
                     />
                   </div>
@@ -90,7 +90,7 @@ export default function ContactForm() {
                       icon="city"
                       size="3x"
                       className={`fas fa-3x mb-2 icon-color ${
-                        hovering.city ? "fa-bounce" : ""
+                        hovering.city ? "scale" : ""
                       }`}
                     />
                   </div>
@@ -113,7 +113,7 @@ export default function ContactForm() {
                   >
                     <MDBIcon
                       className={`icon-color fas fa-3x mb-2 ${
-                        hovering.award ? "fa-bounce" : ""
+                        hovering.award ? "scale" : ""
                       }`}
                       style={{ scale: "1.2" }} // Set the color to your desired color
                       fas

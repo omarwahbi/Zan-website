@@ -4,21 +4,19 @@ import { useForm, ValidationError } from "@formspree/react";
 export default function Form() {
   const [state, handleSubmit] = useForm("xknlrdrj");
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return (
+      <div className="sent-text">
+        <p>
+          We will respond to you as soon as possible <br /> Thank you for
+          choosing Zan Doors
+        </p>
+      </div>
+    );
   }
   return (
     <form className="h-100 form-sizing" onSubmit={handleSubmit}>
       <div className="form-theme">
-        <label
-          htmlFor="name"
-          className="form-label"
-          style={{
-            fontWeight: "500",
-            fontSize: "28px",
-            color: "#1e1e1e",
-            marginBottom: "0px",
-          }}
-        >
+        <label htmlFor="name" className="form-label">
           Name
         </label>
         <input
@@ -27,23 +25,8 @@ export default function Form() {
           type="text"
           name="name"
           placeholder="Name here"
-          style={{
-            borderRadius: "0",
-            border: "none",
-            marginBottom: "11px",
-            backgroundColor: "#f9f9f9",
-          }}
         />
-        <label
-          htmlFor="email"
-          className="form-label"
-          style={{
-            fontWeight: "500",
-            fontSize: "28px",
-            color: "#1e1e1e",
-            marginBottom: "0px",
-          }}
-        >
+        <label htmlFor="email" className="form-label">
           Email Address
         </label>
         <input
@@ -52,26 +35,11 @@ export default function Form() {
           type="email"
           name="email"
           placeholder="email here"
-          style={{
-            borderRadius: "0",
-            border: "none",
-            marginBottom: "11px",
-            backgroundColor: "#f9f9f9",
-          }}
         />
 
         <ValidationError prefix="Email" field="email" errors={state.errors} />
         <div className="mb-3">
-          <label
-            htmlFor="message"
-            className="form-label"
-            style={{
-              fontWeight: "500",
-              fontSize: "28px",
-              color: "#1e1e1e",
-              marginBottom: "0px",
-            }}
-          >
+          <label htmlFor="message" className="form-label">
             Message
           </label>
           <textarea
@@ -80,10 +48,7 @@ export default function Form() {
             className="form-control form-text-area-color"
             placeholder="Any message"
             style={{
-              borderRadius: "0",
-              border: "none",
               marginBottom: "20px",
-              backgroundColor: "#f9f9f9",
             }}
           />
           <ValidationError
@@ -93,27 +58,13 @@ export default function Form() {
           />
         </div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <div
-            id="emailHelp"
-            className="form-text"
-            style={{ color: "#b78364", paddingTop: "5px" }}
-          >
+          <div id="emailHelp" className="form-text">
             We'll never share your email with anyone else.
           </div>
           <button
             type="submit"
             disabled={state.submitting}
-            style={{
-              backgroundColor: "#b78364",
-              width: "130px",
-              height: "40px",
-              border: "none",
-              borderRadius: "0",
-              boxShadow: "none",
-              fontSize: "18px",
-              color: "#f9f9f9",
-              fontWeight: "500",
-            }}
+            className="submit-btn"
           >
             Submit
           </button>

@@ -19,3 +19,6 @@
 .nav-item-color {
   box-shadow: none;
 }
+.navbar-logo-mobile {
+  align-self: flex-start;
+}

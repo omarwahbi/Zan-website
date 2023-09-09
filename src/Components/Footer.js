@@ -6,18 +6,14 @@ import {
   MDBCol,
   MDBIcon,
 } from "mdb-react-ui-kit";
+import logo from "../assets/emptyWhiteLogo.png";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <MDBFooter
-      style={{ backgroundColor: "#1e1e1e" }}
-      className="text-center text-lg-start text-muted"
-    >
-      <section
-        className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-        style={{ width: "81%", margin: "auto" }}
-      >
-        <div className="me-5 d-none d-lg-block" style={{ color: "#eae9e8" }}>
+    <MDBFooter className="text-center text-lg-start text-muted footer-background-color pb-3">
+      <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom section-style container">
+        <div className="me-md-5 d-none d-lg-block footer-text-color">
           <span>Get connected with us on social networks:</span>
         </div>
 
@@ -26,34 +22,39 @@ export default function Footer() {
             href="https://www.facebook.com/Zandoors/photos?locale=ar_AR"
             className="me-4 text-reset"
             target="_blank"
+            rel="noopener noreferrer"
           >
-            <MDBIcon fab icon="facebook-f" style={{ color: "#eae9e8" }} />
-          </a>
-          <a href="#" className="me-4 text-reset">
-            <MDBIcon fab icon="twitter" style={{ color: "#eae9e8" }} />
-          </a>
-          <a href="#" className="me-4 text-reset" target="_blank">
-            <MDBIcon fab icon="google" style={{ color: "#eae9e8" }} />
+            <MDBIcon
+              fab
+              icon="facebook-f"
+              className="footer-text-color icon-hover"
+            />
           </a>
           <a
             href="https://www.instagram.com/zandoorsiraq/"
             target="_blank"
+            rel="noopener noreferrer"
             className="me-4 text-reset"
           >
-            <MDBIcon fab icon="instagram" style={{ color: "#eae9e8" }} />
-          </a>
-          <a href="#" className="me-4 text-reset">
-            <MDBIcon fab icon="linkedin" style={{ color: "#eae9e8" }} />
+            <MDBIcon
+              fab
+              icon="instagram"
+              className="footer-text-color icon-hover"
+            />
           </a>
         </div>
       </section>
 
-      <section className="">
+      <section className="section-style footer-text-color">
         <MDBContainer className="text-center text-md-start mt-5">
           <MDBRow className="mt-3">
-            <MDBCol md="6" lg="6" xl="6" className="mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">
-                <MDBIcon icon="gem" className="me-3" />
+            <MDBCol md="6" lg="6" xl="6" className="ms-md-3">
+              <h6 className="fw-bold mb-4">
+                <img
+                  src={logo}
+                  alt="footer-logo"
+                  className="me-1 footer-logo"
+                />
                 Zan Doors
               </h6>
               <p>
@@ -65,17 +66,24 @@ export default function Footer() {
               </p>
             </MDBCol>
 
-            <MDBCol md="4" lg="3" xl="3" className="mx-auto mb-md-0 mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-              <p>
-                <MDBIcon icon="home" className="me-2" />
-                بغداد - الكرادة - تقاطع عقبة
-              </p>
-              <p>
+            <MDBCol
+              md="4"
+              lg="3"
+              xl="3"
+              className="ms-auto mb-md-0 mb-4 contact-info"
+            >
+              <h6 className=" fw-bold mb-4">Contact</h6>
+              <Link to="https://goo.gl/maps/8VkdePGFYAp8HwVp6" target="_blank">
+                <p className="icon-hover arabic-font">
+                  <MDBIcon icon="home" className="me-2 " />
+                  بغداد - الكرادة - تقاطع عقبة
+                </p>
+              </Link>
+              <p className="icon-hover">
                 <MDBIcon icon="envelope" className="me-3" />
                 doorszan@gmail.com
               </p>
-              <p>
+              <p className="icon-hover">
                 <MDBIcon icon="phone" className="me-3" />
                 07732800200
               </p>

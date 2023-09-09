@@ -5,13 +5,13 @@ import { MDBSpinner } from "mdb-react-ui-kit";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
-export default function GallerySlider() {
+export default function GallerySlider(props) {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getImages() {
-      const storageRef = ref(storage, "/Gallery/");
+      const storageRef = ref(storage, `/Gallery/${props.category}`);
       const listResult = await listAll(storageRef);
 
       const filePromises = listResult.items.map(async (fileRef) => {
@@ -56,13 +56,15 @@ export default function GallerySlider() {
     return (
       <div className="gallery-slidshow mt-5 mb-5">
         <ImageGallery
+          disableKeyDown={false}
           items={images}
-          thumbnailPosition={"left"}
+          thumbnailPosition={"bottom"}
           showPlayButton={false}
           autoPlay={true}
           slideDuration={1200}
           slideInterval={4000}
-          showNav={false}
+          showNav={true}
+          onErrorImageURL="https://previews.123rf.com/images/wisaanu99/wisaanu991506/wisaanu99150600110/41721587-page-not-found-error-404-door-concept.jpg"
         />
       </div>
     );

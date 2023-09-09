@@ -1,0 +1,33 @@
+.footer-text-color {
+  color: #e8e7e6;
+}
+.footer-background-color {
+  background-color: #1e1e1e;
+}
+.section-style {
+  width: 81%;
+  margin: auto;
+}
+.icon-hover {
+  text-decoration: none;
+  color: #e8e7e6;
+}
+.icon-hover:visited {
+  text-decoration: none;
+  color: #e8e7e6;
+}
+.icon-hover:hover {
+  color: #b78364;
+  cursor: pointer;
+}
+.footer-logo {
+  height: 20px;
+}
+.contact-info {
+  padding-left: 60px;
+}
+@media (max-width: 767px) {
+  .contact-info {
+    padding-left: 0;
+  }
+}

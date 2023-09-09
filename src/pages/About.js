@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { MDBTypography, MDBIcon, MDBRipple } from "mdb-react-ui-kit";
+import {
+  MDBTypography,
+  MDBIcon,
+  MDBRipple,
+  MDBSpinner,
+} from "mdb-react-ui-kit";
 import LocationCard from "../Components/LocationCard";
 import { ref, getDownloadURL } from "firebase/storage";
 import storage from "../firebase";
 export default function About() {
+  const [loading, setLoading] = useState(true);
   const [doorImage, setDoorImage] = useState("");
   useEffect(() => {
     async function getImage(downloadPath) {
@@ -11,6 +17,7 @@ export default function About() {
         const imageRef = ref(storage, downloadPath);
         const imageUrl = await getDownloadURL(imageRef);
         setDoorImage(imageUrl); // Set doorImage inside the function
+        setLoading(false);
       } catch (error) {
         console.error("Error getting image:", error);
         throw error; // You can handle the error as needed
@@ -19,18 +26,25 @@ export default function About() {
 
     getImage("/others/door lock.jpeg");
   }, []);
+  if (loading) {
+    return (
+      <div className="spinner">
+        <MDBSpinner />
+      </div>
+    );
+  }
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row mt-5">
         <div className="col-md-4 d-flex justify-content-center">
           <MDBRipple rippleTag="a">
             <img src={doorImage} className="about-img" alt="door with lock" />
           </MDBRipple>
         </div>
         <div className="col-md-8 d-flex justify-content-center flex-column">
-          <h1 className="text-center">Zan Doors</h1>
-          <p className="about-us-text mt-3 pt-3">
+          <h1 className="text-start about-company-name">Zan Doors</h1>
+          <p className="about-us-text">
             Welcome to Zan, where craftsmanship meets innovation! With over 85
             years of experience in the industry, we are your trusted partner for
             all your door needs. Our passion for creating stunning and durable
@@ -44,15 +58,15 @@ export default function About() {
           <div className="text-start">
             <MDBTypography listUnStyled className="mb-0 ">
               <li className="mb-1">
-                <MDBIcon icon="check-circle" className="me-2 text-success" />
+                <MDBIcon icon="check-circle" className="me-2 icon-color" />
                 Unrivaled Selection
               </li>
               <li className="mb-1">
-                <MDBIcon icon="check-circle" className="me-2 text-success" />
+                <MDBIcon icon="check-circle" className="me-2 icon-color" />
                 Cutting-Edge Technology
               </li>
               <li className="mb-1">
-                <MDBIcon icon="check-circle" className="me-2 text-success" />
+                <MDBIcon icon="check-circle" className="me-2 icon-color" />
                 Exceptional Service
               </li>
             </MDBTypography>
@@ -79,7 +93,6 @@ export default function About() {
                 province={"بغداد"}
                 location={"الكرادة - تقاطع عقبة شارع كراج ٢٠٠٠"}
                 number={"07732800200"}
-                background={"primary"}
               />
             </div>
             <div className="col-md-6 mobile-card ">
@@ -87,7 +100,6 @@ export default function About() {
                 province={"البصرة"}
                 location={"شارع الوفود - تقاطع الدويد"}
                 number={"07732800200"}
-                background={"danger"}
               />
             </div>
             <div className="col-md-6 mobile-card">
@@ -95,7 +107,6 @@ export default function About() {
                 province={"ذي قار"}
                 location={"الموحية قرب المدينة المائية"}
                 number={"07801148019"}
-                background={"secondary"}
               />
             </div>
             <div className="col-md-6 mobile-card">
@@ -103,7 +114,6 @@ export default function About() {
                 province={"ميسان"}
                 location={" عواشة شارع الدوريات"}
                 number={"07730006669"}
-                background={"success"}
               />
             </div>
           </div>

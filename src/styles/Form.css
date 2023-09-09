@@ -3,6 +3,33 @@
   justify-items: center;
   align-items: center;
 }
+.form-label {
+  font-weight: 500;
+  font-size: 28px;
+  color: #1e1e1e;
+  margin-bottom: 0px;
+}
+.form-control {
+  border-radius: 0;
+  border: none;
+  margin-bottom: 11px;
+  background-color: #f9f9f9;
+}
+.form-text {
+  color: #b78364;
+  padding-top: 5px;
+}
+.submit-btn {
+  background-color: #b78364;
+  width: 130px;
+  height: 40px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 18px;
+  color: #f9f9f9;
+  font-weight: 500;
+}
 .form-text-area-color {
   background-color: #f9f9f9;
 }
@@ -12,4 +39,17 @@
   background-color: #e8e7e6;
   padding: 10px;
   margin-bottom: 30px;
+}
+.sent-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 100%;
+  margin-left: 38px;
+}
+@media (max-width: 767px) {
+  .form-text {
+    font-size: 12px;
+  }
 }
