@@ -45,13 +45,13 @@ export default function About() {
         <div className="col-md-8 d-flex justify-content-center flex-column">
           <h1 className="text-start about-company-name">Zan Doors</h1>
           <p className="about-us-text">
-            Welcome to Zan, where craftsmanship meets innovation! With over 85
-            years of experience in the industry, we are your trusted partner for
-            all your door needs. Our passion for creating stunning and durable
-            doors has driven us to become a leading name in the business.
-            Whether you're seeking timeless elegance, modern functionality, or
-            customized solutions, our team of experts is dedicated to delivering
-            the perfect door for your space. We take pride in our commitment to
+            Welcome to Zan, where craftsmanship meets innovation! With our
+            experience in the industry, we are your trusted partner for all your
+            door needs. Our passion for creating stunning and durable doors has
+            driven us to become a leading name in the business. Whether you're
+            seeking timeless elegance, modern functionality, or customized
+            solutions, our team of experts is dedicated to delivering the
+            perfect door for your space. We take pride in our commitment to
             quality, sustainability, and customer satisfaction. Discover the
             perfect entrance to your world with Zan doors.
           </p>

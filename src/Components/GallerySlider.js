@@ -42,7 +42,7 @@ export default function GallerySlider(props) {
     }
 
     getImages();
-  }, []);
+  }, [props.category]);
 
   if (loading) {
     return (
@@ -56,14 +56,8 @@ export default function GallerySlider(props) {
     return (
       <div className="gallery-slidshow mt-5 mb-5">
         <ImageGallery
-          disableKeyDown={false}
           items={images}
-          thumbnailPosition={"bottom"}
-          showPlayButton={false}
           autoPlay={true}
-          slideDuration={1200}
-          slideInterval={4000}
-          showNav={true}
           onErrorImageURL="https://previews.123rf.com/images/wisaanu99/wisaanu991506/wisaanu99150600110/41721587-page-not-found-error-404-door-concept.jpg"
         />
       </div>

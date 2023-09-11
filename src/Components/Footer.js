@@ -59,10 +59,10 @@ export default function Footer() {
               </h6>
               <p>
                 Zan Doors was founded on a legacy of excellence and passion for
-                superior craftsmanship. Our journey began in 2000, under the
-                visionary leadership of Mr. Zaid, whose dedication and expertise
-                propelled us to become one of the foremost companies in the
-                doors industry.
+                superior craftsmanship. Our journey began in 2018, under the
+                visionary leadership of Mr. Asaad, whose dedication and
+                expertise propelled us to become one of the foremost companies
+                in the doors industry.
               </p>
             </MDBCol>
 

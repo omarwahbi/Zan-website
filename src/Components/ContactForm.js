@@ -68,7 +68,7 @@ export default function ContactForm() {
                       }`}
                     />
                   </div>
-                  <h5 className=" fw-bold mb-1 icon-color">+900</h5>
+                  <h5 className=" fw-bold mb-1 icon-color">+5000</h5>
                   <h6 className="fw-normal mb-0 fw-bold font-color">
                     Projects
                   </h6>
@@ -121,7 +121,7 @@ export default function ContactForm() {
                       size="3x"
                     />
                   </div>
-                  <h5 className=" fw-bold mb-1 icon-color">+1000</h5>
+                  <h5 className=" fw-bold mb-1 icon-color">+3000</h5>
                   <h6 className="fw-normal mb-0 fw-bold font-color">
                     Happy customers
                   </h6>
