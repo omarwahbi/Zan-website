@@ -25,7 +25,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
-        <Analytics />
         <Route
           path="/projects/outdoor"
           element={<Project category={"outdoor"} />}
@@ -40,6 +39,7 @@ function App() {
         />
       </Routes>
       <Footer />
+      <Analytics />
     </div>
   );
 }
