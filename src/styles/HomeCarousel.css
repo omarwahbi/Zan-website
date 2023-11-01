@@ -44,7 +44,9 @@
   font-family: "Roboto", sans-serif;
   font-weight: 550;
 }
-
+.category-link {
+  display: contents;
+}
 @media (max-width: 767px) {
   .header-div {
     margin-top: 32px;

@@ -37,6 +37,10 @@ function App() {
           path="/projects/gates"
           element={<Project category={"gates"} />}
         />
+        <Route
+          path="/projects/windows"
+          element={<Project category={"windows"} />}
+        />
       </Routes>
       <Footer />
       <Analytics />

@@ -9,7 +9,7 @@ import LocationCard from "../Components/LocationCard";
 import { ref, getDownloadURL } from "firebase/storage";
 import storage from "../firebase";
 export default function About() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [doorImage, setDoorImage] = useState("");
   useEffect(() => {
     async function getImage(downloadPath) {

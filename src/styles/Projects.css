@@ -7,7 +7,7 @@
 }
 
 .project-categories {
-  max-width: 70%;
+  max-width: 95%;
   margin: auto;
 }
 .menu-item-img {
@@ -28,5 +28,8 @@
   .assistance-img {
     display: none;
     margin: 0;
+  }
+  .menu-container {
+    max-width: 100%;
   }
 }

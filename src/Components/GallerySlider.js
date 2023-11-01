@@ -7,7 +7,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 
 export default function GallerySlider(props) {
   const [images, setImages] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function getImages() {

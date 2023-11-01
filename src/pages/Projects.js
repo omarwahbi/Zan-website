@@ -7,7 +7,7 @@ import { MDBSpinner } from "mdb-react-ui-kit";
 export default function Projects() {
   const [assistanceImg, setAssistanceImage] = useState();
   const [images, setImages] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     async function getImage(downloadPath) {
       try {
@@ -26,7 +26,6 @@ export default function Projects() {
     async function getImages() {
       const storageRef = ref(storage, "/Home slide show/");
       const listResult = await listAll(storageRef);
-
       const filePromises = listResult.items.map(async (fileRef) => {
         const url = await getDownloadURL(fileRef);
         const metadata = await getMetadata(fileRef);
@@ -47,6 +46,8 @@ export default function Projects() {
   let outdoorImageUrl;
   let gateImage;
   let gateImageUrl;
+  let windowsImage;
+  let windowsImageUrl;
   if (images) {
     indoorImage = images.find((image) => image.name === "indoor.png");
     indoorImageUrl = indoorImage ? indoorImage.url : null;
@@ -54,6 +55,8 @@ export default function Projects() {
     outdoorImageUrl = outdoorImage ? outdoorImage.url : null;
     gateImage = images.find((image) => image.name === "gates.png");
     gateImageUrl = gateImage ? gateImage.url : null;
+    windowsImage = images.find((image) => image.name === "window.png");
+    windowsImageUrl = windowsImage ? windowsImage.url : null;
   }
   if (loading) {
     return (
@@ -67,7 +70,56 @@ export default function Projects() {
     <div>
       <div className="menu-container container">
         <div className="row categories-container">
-          <div className="col-md-4 mb-4">
+          <div className="row m-auto d-md-none">
+            <div className="col-6 mb-4 p-0">
+              <Link to={"./windows"} className="d-flex category-scale">
+                <img
+                  src={windowsImageUrl}
+                  alt="Windows projects"
+                  className="project-categories"
+                />
+              </Link>
+            </div>
+            <div className="col-6 mb-4 p-0">
+              <Link to={"./indoor"} className="d-flex category-scale">
+                <img
+                  src={indoorImageUrl}
+                  alt="indoor doors"
+                  className="project-categories"
+                />
+              </Link>
+            </div>
+          </div>
+          <div className="row m-auto d-md-none">
+            <div className="col-6 mb-4 p-0">
+              <Link to={"./outdoor"} className="d-flex category-scale">
+                <img
+                  src={outdoorImageUrl}
+                  alt="outdoor doors"
+                  className="project-categories"
+                />
+              </Link>
+            </div>
+            <div className="col-6 mb-4 p-0">
+              <Link to={"./gates"} className="d-flex category-scale">
+                <img
+                  src={gateImageUrl}
+                  alt="gate doors"
+                  className="project-categories"
+                />
+              </Link>
+            </div>
+          </div>
+          <div className="col-md-3 mb-4 p-0 d-none d-md-flex">
+            <Link to={"./windows"} className="d-flex category-scale">
+              <img
+                src={windowsImageUrl}
+                alt="Windows projects"
+                className="project-categories"
+              />
+            </Link>
+          </div>
+          <div className="col-md-3 mb-4 p-0 d-none d-md-flex">
             <Link to={"./indoor"} className="d-flex category-scale">
               <img
                 src={indoorImageUrl}
@@ -76,7 +128,7 @@ export default function Projects() {
               />
             </Link>
           </div>
-          <div className="col-md-4 mb-4 ">
+          <div className="col-md-3 mb-4 p-0 d-none d-md-flex">
             <Link to={"./outdoor"} className="d-flex category-scale">
               <img
                 src={outdoorImageUrl}
@@ -85,7 +137,7 @@ export default function Projects() {
               />
             </Link>
           </div>
-          <div className="col-md-4 mb-4">
+          <div className="col-md-3 mb-4 p-0 d-none d-md-flex">
             <Link to={"./gates"} className="d-flex category-scale">
               <img
                 src={gateImageUrl}
